@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter_18pt-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter_18pt-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: fontawesome;
+  src: url(../icon/fa-brands-400.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: fontawesome;
+  src: url(../icon/fa-duotone-900.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: fontawesome;
+  src: url(../icon/fa-light-300.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: fontawesome;
+  src: url(../icon/fa-regular-400.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: fontawesome;
+  src: url(../icon/fa-solid-900.woff2);
+  font-weight: 900;
+}
+
+.fab{
+  font-family:fontawesome ;
+  font-weight: 400;
+}
+.fad{
+  font-family:fontawesome ;
+  font-weight: 900;
+}
+.fal{
+  font-family:fontawesome ;
+  font-weight: 300;
+}
+.far{
+  font-family:fontawesome ;
+  font-weight: 400;
+}
+.fas{
+  font-family:fontawesome ;
+  font-weight: 900;
+}

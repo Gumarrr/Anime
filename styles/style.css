@@ -1,0 +1,483 @@
+@import "font.css";
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --primary-color: #ffffff;
+  --anime-number: linear-gradient(180deg, #dc781c 0%, #c93677 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  text-wrap: balance;
+  color: var(--primary-color);
+}
+
+html,body{
+  scroll-behavior: smooth;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1840px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header_bg {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0 25px;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 0.7) 0%,
+    rgba(11, 11, 11, 0.7) 93.9%,
+    rgba(11, 11, 11, 0.7) 100%
+  );
+  z-index: 9999;
+}
+
+.nav_left {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav_link {
+  font: 600 clamp(16px, 3vw, 20px) var(--font-family);
+  &::first-letter {
+    color: blueviolet;
+  }
+}
+
+.nav_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav_input {
+  border: 2px solid #fff;
+  border-radius: 100px;
+  width: clamp(100px, 24vw, 438px);
+  padding: 10px 100px;
+  &::placeholder {
+    color: #fff;
+    font: 500 clamp(11px, 2vw, 20px) var(--font-family);
+    text-align: center;
+  }
+}
+
+.user::before {
+  content: "\f007";
+  font-style: normal;
+  font-size: 20px;
+}
+
+.nav_btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  background: transparent;
+  display: none;
+}
+
+.nav_span,
+.nav_span::before,
+.nav_span::after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  background-color: aqua;
+  transition: 0.3s;
+}
+
+.nav_span::before,
+.nav_span::after {
+  content: "";
+  transition: 0.3s;
+  display: flex;
+}
+
+.nav_span::before {
+  top: -8px;
+}
+
+.nav_span::after {
+  top: 8px;
+}
+
+.nav_btn.active .nav_span {
+  background: transparent;
+}
+
+.nav_btn.active .nav_span::before {
+  background: #fff;
+  transform: rotate(45deg) translate(6px, 5px);
+}
+
+.nav_btn.active .nav_span::after {
+  background: #fff;
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.nav_bg {
+  position: fixed;
+  inset: 0;
+  background: #000000d4;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 0.7) 0%,
+    rgba(11, 11, 11, 0.7) 93.9%,
+    rgba(11, 11, 11, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.bg_span {
+  font: 500 clamp(13px, 2vw, 18px) / 156% var(--font-family);
+}
+
+.bg_title {
+  font: 600 clamp(20px, 5vw, 75px) var(--font-family);
+  max-width: 874px;
+  margin: 10px 0 40px;
+}
+
+.bg_text {
+  color: #d0d0d0;
+  font: 600 clamp(15px, 2vw, 18px) / 156% var(--font-family);
+  max-width: 530px;
+  margin-bottom: 60px;
+}
+
+.bg_btns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.bg_btn {
+  font: 600 clamp(15px, 2vw, 20px) / 156% var(--font-family);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  &:hover {
+    border: 3px solid blue;
+  }
+}
+
+.anime {
+  background: url(../images/anime\ bg.png) no-repeat center / cover;
+  padding: 120px 0;
+}
+
+.anime_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anime_title {
+  font: 600 clamp(20px, 3vw, 30px) var(--font-family);
+  border-bottom: 2px solid rgb(105, 105, 233);
+  padding-bottom: 4px;
+}
+
+.anime_link {
+  font: 600 clamp(15px, 2vw, 24px) var(--font-family);
+}
+
+.anime_items {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+  margin-top: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.anime_item {
+  max-width: 257px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.anime_hover {
+  background: linear-gradient(90deg, #101010 0%, rgba(0, 0, 0, 0.9) 100%);
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  padding: 15px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 1s;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.anime_hover_title {
+  font: 600 clamp(18px, 2vw, 22px) / 30px var(--font-family);
+  span {
+    color: transparent;
+    background: linear-gradient(180deg, #dc781c 0%, #c93677 100%) text;
+  }
+}
+
+.anime_hover-text {
+  font: 400 clamp(13px, 2vw, 16px) var(--font-family);
+}
+
+.anime_item:hover .anime_hover {
+  height: 60%;
+}
+
+.anime_heading:nth-of-type(3) {
+  margin-top: 100px;
+}
+
+.section_bg {
+  background: url(/images/Group\ 16.png) no-repeat center / cover;
+}
+
+.trailer,
+.upcoming {
+  padding: 60px 0 110px;
+  position: relative;
+}
+
+.trailer::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  top: -1.5px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, blue, rgb(255, 1, 204));
+}
+
+.trailer_left {
+  position: relative;
+  height: max-content;
+}
+
+video {
+  max-width: 1110px;
+  width: 100%;
+  height: 533px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.video_bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    92deg,
+    rgba(0, 0, 0, 0.44) 0%,
+    rgba(0, 0, 0, 0.33) 100%
+  );
+  pointer-events: none;
+}
+
+.trailer_about {
+  max-width: 575px;
+}
+
+.trailer_about-title {
+  font: 700 clamp(24px, 4vw, 55px) var(--font-family);
+}
+.trailer_about-span {
+  font: 700 clamp(16px, 3vw, 30px) var(--font-family);
+  padding: 9px 0 43px;
+}
+
+.trailer_about-text {
+  font: 600 clamp(13px, 2vw, 18px) / 156% var(--font-family);
+  margin-bottom: 70px;
+}
+
+.trailer_content {
+  display: flex;
+  gap: 50px;
+}
+
+.upcoming::before,
+.upcoming::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.upcoming::before {
+  top: -1.5px;
+  background: linear-gradient(to right, #9747ff, #f22323);
+}
+
+.upcoming::after {
+  bottom: -1.5px;
+  background: linear-gradient(to right, #dc781c, #c93677);
+}
+
+.upcoming_cards {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  margin-top: 50px;
+}
+
+.upcoming_about {
+  max-width: 410px;
+  width: 100%;
+}
+
+.upcoming_about_title {
+  font: 700 clamp(24px, 2vw, 40px) var(--font-family);
+}
+.upcoming_about_text {
+  font: 600 clamp(13px, 2vw, 18px) var(--font-family);
+}
+
+.upcoming_about_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 36px 0;
+}
+
+.upcoming_about_btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  font: 600 clamp(16px, 2vw, 18px) var(--font-family);
+  color: transparent;
+  background: linear-gradient(180deg, #dc781c 0%, #c93677 100%) text;
+  border: 2px solid rgb(68, 5, 88);
+}
+
+.footer {
+  background: url(../images/footer_bg.png) no-repeat center/cover;
+  padding: 80px 0 145px;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer_card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer_title {
+  font: 600 clamp(16px, 2vw, 25px) / 183% var(--font-family);
+}
+
+.footer_link {
+  font: 600 clamp(16px, 2vw, 20px) / 183% var(--font-family);
+}
+
+.footer_list li {
+  list-style: disc;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.insta::before {
+  content: "\f16d";
+}
+.tw::before {
+  content: "\f099";
+}
+
+.insta,
+.tw {
+  font-style: normal;
+  font-size: 30px;
+  color: #1da1f2;
+}
+
+.insta {
+  color: transparent;
+  background: linear-gradient(#9747ff, #cf427b, #bd5d05, #f22323) text;
+}
